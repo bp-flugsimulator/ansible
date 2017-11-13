@@ -1,0 +1,18 @@
+---
+- hosts: neo
+  vars:
+    java_packages:
+      - openjdk-8-jdk
+
+  tasks:
+  - name: deploy ssh keys
+    authorized_key:
+      user: root
+      state: present
+      key: "{{ item }}"
+    with_items: "{{ssh.authorized_keys}}"
+  roles:
+    - role: geerlingguy.java
+    - role: geerlingguy.jenkins
+      become: true
+    

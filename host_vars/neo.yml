@@ -1,0 +1,3 @@
+ssh:
+  authorized_keys:
+    - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINMXyyARPsAnt+uHQ9d5uE0WIn1L/I9StJX65b+iGxHv Heiko
