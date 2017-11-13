@@ -16,6 +16,7 @@ Vagrant.configure(2) do |config|
     ansible.verbose = "v"
     ansible.become = true
     ansible.playbook = "site.yml"
+    ansible.vault_password_file = "vaultpassword"
     config.vm.network "forwarded_port", guest: 8080, host: 8080
   end
 end
